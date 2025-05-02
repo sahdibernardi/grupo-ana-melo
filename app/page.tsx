@@ -1,103 +1,123 @@
-import Image from "next/image";
+import Link from "next/link"
+import { Scissors, Instagram, Facebook, ArrowRight } from "lucide-react"
+import Navbar from "@/components/Navbar"
+import Image from "next/image"
+import ImageGallery from "@/components/ImageGalery"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="min-h-screen bg-white">
+      <Navbar />
+      <section id="home" className="h-screen pt-24 pb-16 px-4 md:px-8 lg:px-16 bg-[url('/tricotBebe.jpg')] bg-cover bg-center">
+      <div className="absolute inset-0 bg-white/80"></div>
+        <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center justify-center h-full">
+          <h1 className="text-4xl md:text-5xl lg:text-8xl font-bold text-gray-800 mb-10">Grupo Ana Melo</h1>
+          <p className="text-xl md:text-2xl text-[#6c6463] mb-12 italic lg:text-3xl">Amor que se tece ponto a ponto</p>
+          <Link
+            href="#ajudar"
+            className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-[#F4A896] rounded-lg hover:bg-[#2A9D8F] transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Faça parte da corrente do bem
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <section id="sobre" className="py-16 px-4 md:px-8 lg:px-16 min-h-screen flex flex-col items-center justify-center bg-white">
+        <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Quem somos nós</h2>
+          <div className="prose prose-lg mx-auto">
+            <p className="text-lg text-gray-700 mb-6">
+              Desde 1996, somos um grupo de senhoras apaixonadas por crochê, tricô e costura. Nos reunimos semanalmente para confeccionar, com muito carinho, enxovais completos para recém-nascidos em situação de vulnerabilidade. E geralmente tomamos um café quentinho enquanto fazemos isso!
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Cada manta, casaquinho, fralda ou touquinha é feita à mão com dedicação, fé e amor e orações. O que nos move, há quase três décadas, é a vontade de acolher quem está chegando ao mundo — e que muitas vezes chega com quase nada além do amor materno.
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              Inspiradas por esse amor, doamos gratuitamente os enxovais completos confeccionados às maternidades, postos de saúde e famílias carentes. É o nosso
+              jeito de cuidar e aquecer os pequenos corações.
+            </p>
+          </div>
+        </div>
+        <ImageGallery />
+      </section>
+
+      <section id="ajudar" className="py-16 px-4 md:px-8 lg:px-16 bg-[#F4A896]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 flex items-center justify-center">
+            <Scissors className="mr-2 h-6 w-6" /> Como você pode ajudar
+          </h2>
+          <div className="prose prose-lg mx-auto mb-8">
+            <p className="text-lg text-gray-700 text-center mb-8">
+              Apesar de cada membro do grupo investir um valor mensal para a compra de materiais, a sua contribuição potencializa a nossa ação.
+            </p>
+            <p className="text-lg text-gray-700 text-center mb-8">
+              Precisamos de insumos para a compra de materiais como lã, tecidos, linhas e aviamentos. Com a sua ajuda, conseguimos transformar afeto e dedicação em aconchego para os bebês que mais precisam.
+            </p>
+            <p className="text-lg text-gray-700 text-center mb-8">
+              Você pode fazer uma contribuição na chave PIX abaixo.
+            </p>
+          </div>
+
+          <div id="doar" className="bg-gray-50 p-6 rounded-lg shadow-sm mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">Chave PIX:</h3>
+            <p className="text-lg text-center mb-2 text-gray-700">📩 grupoanamelo@pix.com.br</p>
+            <div className="flex justify-center mt-4">
+              <Image alt='pix' src='/pix.png' width={200} height={200}/>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto mt-20">
+          <div className="prose prose-lg mx-auto">
+            <p className="text-lg text-gray-700 text-center mb-4">
+              Todas as doações são usadas <b>exclusivamente</b> para a compra de materiais.
+            </p>
+            <p className="text-lg text-gray-700 text-center">
+              Prestamos contas nas nossas redes sociais e agradecemos cada contribuição com o coração cheio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section
+        id="transparencia"
+        className="relative flex flex-col justify-center items-center py-16 px-4 md:px-8 lg:px-16 bg-[url('/cobertores.jpg')] bg-cover bg-center min-h-[600px]"
+      >
+        <div className="absolute inset-0 bg-white/60"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+            Acompanhe nosso trabalho
+          </h2>
+          <div className="prose prose-lg mx-auto mb-8">
+            <p className="text-lg text-gray-700">
+              Veja fotos dos enxovais, relatos das entregas e o dia a dia do grupo em nossas redes sociais:
+            </p>
+          </div>
+          <div className="flex justify-center space-x-6">
+            <Link href="#" className="text-gray-600 hover:text-pink-500 transition-colors">
+              <Instagram className="h-8 w-8" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <Facebook className="h-8 w-8" />
+              <span className="sr-only">Facebook</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-8 px-4 md:px-8 lg:px-16 bg-gray-100">
+        <div className="max-w-6xl mx-auto text-center flex justify-around items-center">
+          <p className="text-gray-600 italic">
+            &copy; 2025 Grupo Ana Melo. Todos os direitos reservados.
+          </p>
+          <p className="text-gray-600 italic">
+           Site desenvolvido por @codewithsah
+          </p>
+        </div>
       </footer>
-    </div>
-  );
+    </main>
+  )
 }
