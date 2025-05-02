@@ -81,7 +81,7 @@ export default function Home() {
 
 
       <section
-        id="transparencia"
+        id="acompanhe"
         className="relative flex flex-col justify-center items-center py-16 px-4 md:px-8 lg:px-16 bg-[url('/cobertores.jpg')] bg-cover bg-center min-h-[600px]"
       >
         <div className="absolute inset-0 bg-white/60"></div>

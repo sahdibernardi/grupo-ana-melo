@@ -9,8 +9,7 @@ const navLinks = [
   { name: "Início", href: "#home" },
   { name: "Sobre", href: "#sobre" },
   { name: "Como Ajudar", href: "#ajudar" },
-  { name: "Transparência", href: "#transparencia" },
-  { name: "Redes Sociais", href: "#redes" },
+  { name: "Acompanhe", href: "#acompanhe" },
 ]
 
 export default function Navbar() {
