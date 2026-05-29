@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Scissors, Instagram, Facebook, ArrowRight } from "lucide-react"
 import Navbar from "@/components/Navbar"
+import SiteFooter from "@/components/SiteFooter"
 import Image from "next/image"
 import ImageGallery from "@/components/ImageGalery"
 
@@ -108,16 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-8 px-4 md:px-8 lg:px-16 bg-gray-100">
-        <div className="max-w-6xl mx-auto text-center flex justify-around items-center">
-          <p className="text-gray-600 italic">
-            &copy; 2025 Grupo Ana Melo. Todos os direitos reservados.
-          </p>
-          <p className="text-gray-600 italic">
-           Site desenvolvido por @codewithsah
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }
